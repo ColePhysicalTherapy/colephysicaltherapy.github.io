@@ -6,22 +6,118 @@
     <title>Cole Physical Therapy</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
             text-align: center;
+            margin-bottom: 40px;
         }
-        h1 {
-            color: #007BFF;
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #4caf50;
         }
-        p {
-            font-size: 18px;
-            color: #333;
+
+        header p {
+            font-size: 1.25em;
+            color: #cccccc;
+        }
+
+        .content {
+            max-width: 800px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .contact {
+            font-size: 1.2em;
+            margin-top: 30px;
+        }
+
+        .contact a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #555555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .content h2 {
+                font-size: 1.75em;
+            }
+
+            .content p {
+                font-size: 1.1em;
+            }
+
+            .contact {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Cole Physical Therapy</h1>
-    <p>This is a simple website hosted on GitHub Pages!</p>
+
+    <header>
+        <h1>Cole Physical Therapy</h1>
+        <p>Your Path to Efficient Wellness</p>
+    </header>
+
+    <div class="content">
+        <h2>Physical Therapy & Wellness Services</h2>
+        <p>
+            We offer convenient, high-quality physical therapy services to help you reach your health and wellness goals. 
+            Whether you need support for injury recovery, chronic pain, or general wellness, our mobile services cater to 
+            local clients, and our telehealth options provide accessible care for online clients.
+        </p>
+
+        <div class="contact">
+            <p>Contact us for an appointment:</p>
+            <p>Email: <a href="mailto:contact@colephysicaltherapy.com">contact@colephysicaltherapy.com</a></p>
+            <p>Phone: <a href="tel:3602001620">(360) 200-1620</a></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Cole Physical Therapy. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
