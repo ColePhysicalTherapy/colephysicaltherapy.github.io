@@ -2,119 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cole Physical Therapy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Styles -->
     <style>
+        /* Global Styles */
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #ffffff;
-            background-color: #1e1e1e;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            z-index: 1000;
+            top: 0;
+        }
+        nav ul {
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 3em;
+            list-style: none;
             margin: 0;
-            color: #4caf50;
         }
-
-        header p {
-            font-size: 1.25em;
-            color: #cccccc;
+        nav li {
+            margin: 0 20px;
         }
-
-        .content {
-            max-width: 800px;
+        nav a {
+            color: #fff;
+            font-weight: bold;
+        }
+        /* Header */
+        header {
+            background-image: url('hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
             text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             padding: 0 20px;
         }
-
-        .content h2 {
-            font-size: 2em;
-            color: #ffffff;
-            margin-bottom: 20px;
+        header h1 {
+            font-size: 4em;
+            margin: 0;
         }
-
-        .content p {
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        /* Services & Experience */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .flex-item {
+            max-width: 300px;
+            margin: 20px;
+            text-align: center;
+        }
+        .flex-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .flex-item h3 {
+            margin-top: 15px;
+        }
+        /* Contact */
+        .contact-info {
+            text-align: center;
             font-size: 1.2em;
-            line-height: 1.6;
-            color: #cccccc;
-            margin-bottom: 30px;
         }
-
-        .contact {
-            font-size: 1.2em;
-            margin-top: 30px;
+        .contact-info p {
+            margin: 10px 0;
         }
-
-        .contact a {
-            color: #4caf50;
-            text-decoration: none;
+        /* YouTube Section */
+        .youtube-video {
+            display: flex;
+            justify-content: center;
         }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
+        /* Footer */
         footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #555555;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
         }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5em;
+                font-size: 3em;
             }
-
-            .content h2 {
-                font-size: 1.75em;
+            nav ul {
+                flex-direction: column;
             }
-
-            .content p {
-                font-size: 1.1em;
+            nav li {
+                margin: 10px 0;
             }
-
-            .contact {
-                font-size: 1.1em;
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
         <h1>Cole Physical Therapy</h1>
         <p>Your Path to Efficient Wellness</p>
     </header>
 
-    <div class="content">
+    <!-- About Section -->
+    <section id="about">
         <h2>Physical Therapy & Wellness Services</h2>
         <p>
-            We offer convenient, high-quality physical therapy services to help you reach your health and wellness goals. 
-            Whether you need support for injury recovery, chronic pain, or general wellness, our mobile services cater to 
-            local clients, and our telehealth options provide accessible care for online clients.
+            We offer convenient, high-quality physical therapy services to help you reach your health and wellness goals. Whether you need support for injury recovery, chronic pain, or general wellness, our mobile services cater to local clients, and our telehealth options provide accessible care for online clients.
         </p>
+    </section>
 
-        <div class="contact">
-            <p>Contact us for an appointment:</p>
-            <p>Email: <a href="mailto:contact@colephysicaltherapy.com">contact@colephysicaltherapy.com</a></p>
-            <p>Phone: <a href="tel:3602001620">(360) 200-1620</a></p>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="physical_therapy.jpg" alt="Physical Therapy Services">
+                <h3>Physical Therapy Services</h3>
+                <p>
+                    Comprehensive therapy to aid recovery, improve mobility, and enhance overall physical function.
+                </p>
+            </div>
+            <div class="flex-item">
+                <img src="wellness.jpg" alt="Wellness Services">
+                <h3>Wellness Services</h3>
+                <p>
+                    Personalized wellness programs designed to promote long-term health and well-being.
+                </p>
+            </div>
+            <div class="flex-item">
+                <img src="telehealth.jpg" alt="Telehealth Services">
+                <h3>Telehealth Services</h3>
+                <p>
+                    Accessible online consultations to provide care wherever you are.
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Our Experience</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="karate.jpg" alt="Karate Experience">
+                <h3>Karate</h3>
+            </div>
+            <div class="flex-item">
+                <img src="bjj.jpg" alt="Brazilian Jiu-Jitsu Experience">
+                <h3>Brazilian Jiu-Jitsu</h3>
+            </div>
+            <div class="flex-item">
+                <img src="judo.jpg" alt="Judo Experience">
+                <h3>Judo</h3>
+            </div>
+        </div>
+        <p style="text-align: center;">
+            Leveraging martial arts expertise to provide specialized sports rehabilitation and performance enhancement.
+        </p>
+    </section>
+
+    <!-- YouTube Section -->
+    <section id="youtube">
+        <h2>Our YouTube Channel</h2>
+        <p style="text-align: center;">
+            Explore our videos for tips, exercises, and insights into physical therapy and wellness.
+        </p>
+        <div class="youtube-video">
+            <!-- Replace VIDEO_ID with your actual YouTube video ID -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us for an Appointment</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:contact@colephysicaltherapy.com">contact@colephysicaltherapy.com</a></p>
+            <p>Phone: <a href="tel:+13602001620">(360) 200-1620</a></p>
+            <p>Serving: Vancouver, WA and Portland, OR</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         &copy; 2024 Cole Physical Therapy. All Rights Reserved.
     </footer>
